@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/cardPriorityImageView"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardCopy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/cardTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="serif-monospace"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardPriorityImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cardDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardPriorityImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cardTitleTextView" />
+
+    <TextView
+        android:id="@+id/cardCompletedTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardPriorityImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cardDescriptionTextView" />
+
+    <ImageButton
+        android:id="@+id/cardCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toStartOf="@+id/cardDelete"
+        app:layout_constraintStart_toEndOf="@+id/cardPriorityImageView"
+        app:layout_constraintTop_toBottomOf="@+id/cardCompletedTextView"
+        app:srcCompat="@drawable/ic_copy" />
+
+    <ImageButton
+        android:id="@+id/cardDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardCopy"
+        app:layout_constraintTop_toBottomOf="@+id/cardCompletedTextView"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCopy"
+        app:srcCompat="@android:color/darker_gray" />
+
+</android.support.constraint.ConstraintLayout>
